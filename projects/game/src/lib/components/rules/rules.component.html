@@ -1,0 +1,78 @@
+<gamesbyemail-base-rules [gameName]="'McCooey Hex Chess'">
+  <h5><a name="Object">Object</a></h5>
+  <p>To put the opponent's king in 'Checkmate'.</p>
+  <h5><a name="Moves">Moves</a></h5>
+  <p>
+    The players take turns moving pieces as described below. The following conditions must be met for a legal move:
+  </p>
+  <ul>
+    <li>The player's king may not be in 'Check' at the end of the move.</li>
+    <li>The player must move a piece as described below.</li>
+  </ul>
+  <p>If either condition can not be met, the game is over. If the player's king is in '<a href="#Check">Check</a>' it
+    is termed 'Checkmate' and the player loses. If the player's king is not in '<a href="#Check">Check</a>', it is
+    termed a 'Statemate' and the game is a tie.</p>
+  <h5><a name="Check">Check</a></h5>
+  <p>A king is in 'Check' if the hex it occupies is attacked by an opposing piece as described below.</p>
+  <h5><a name="Taking">Taking</a></h5>
+  <p>A piece is taken when an opposing piece moves to occupy it's hex. The taken piece is removed from the board</p>
+  <h5><a name="Pieces">Pieces</a></h5>
+  <p class="clear-left">
+    <span class="piece-image" [template-projection]="pieceLibrary" [key]="{type:'Pawn',team:team}"></span>
+    <b><a name="Pieces.Pawns">Pawns</a></b> move directly forward one space if the space is not occupied. Pawns
+    can only attack one space diagonaly forward to either side, they cannot attack directly forward.
+  </p>
+  <p><a name="Pieces.Pawns.En Passant"><i>Two-space move and 'en passant':</i></a> If a pawn has not made a previous
+    move in the game, it may move forward two spaces if both spaces are not occupied. If the intermediate space is
+    attacked by an opposing pawn, the opponent has the option of 'taking' the pawn on the next move as if it had only
+    been moved one space. This right is called 'en passant' ('take in passing') and must be exercised immediately or
+    forfeited.
+  </p>
+  <p><a name="Pieces.Pawns.Promoting"><i>Promoting:</i></a> When a pawn reaches the rank furthest from its starting
+    position it must be exchanged as part of the same move on the same hex for a new <a href="#Pieces.Queens">queen</a>,
+    <a href="#Pieces.Rooks">rook</a>, <a href="#Pieces.Bishops">bishop</a>, or <a href="#Pieces.Knights">knight</a> of
+    the same colour. The player’s choice is not restricted to pieces that have been captured previously. This exchange
+    of a pawn for another piece is called ‘promotion’ and the effect of the new piece is immediate.
+  </p>
+  <p>
+    <span class="piece-image" [template-projection]="pieceLibrary" [key]="{type:'Knight',team:team}"></span>
+    <b><a name="Pieces.Knights">Knights</a></b> both move and attack in an L shape, either two spaces vertically
+    and one horizontally, or one vertically and two horizontally. Knights can jump over any piece (though any jumped
+    pieces are not removed) and therefore cannot be blocked.
+  </p>
+  <p class="clear-left">
+    <span class="piece-image" [template-projection]="pieceLibrary" [key]="{type:'Bishop',team:team}"></span>
+    <b><a name="Pieces.Bishops">Bishops</a></b> both move and attack any number of spaces diagonaly in a straight
+    line. They may may not jump pieces in their path and can therefore be blocked.
+  </p>
+  <p class="clear-left">
+    <span class="piece-image" [template-projection]="pieceLibrary" [key]="{type:'Rook',team:team}"></span>
+    <b><a name="Pieces.Rooks">Rooks</a></b> can both move and attack any number of spaces horizontaly or
+    vertically in a straight line. They may not jump pieces in their path and can therefore be blocked.
+  </p>
+  <p class="clear-left">
+    <span class="piece-image" [template-projection]="pieceLibrary" [key]="{type:'Queen',team:team}"></span>
+    <b><a name="Pieces.Queens">Queens</a></b> both move and attack any number of spaces in any direction in a
+    straight line. They may not jump pieces in their path and can therefore be blocked.
+  </p>
+  <p class="clear-left">
+    <span class="piece-image" [template-projection]="pieceLibrary" [key]="{type:'King',team:team}"></span>
+    <b><a name="Pieces.Kings">Kings</a></b> both move and attack one space in any direction.
+  </p>
+  <h5 class="clear-left"><a name="Dark Chess">Dark McCooey Hex Chess</a></h5>
+  <p>
+    Dark McCooey Hex Chess is a variant of McCooey Hex Chess. All the pieces move in the same fashion. The differences
+    are:
+  </p>
+  <ul>
+    <li>A player is only able to see hexes that their pieces are capable of moving to or attacking, hence the name
+      Dark McCooey Hex Chess.</li>
+    <li>There is no concept of 'check'. Because of the above limitation, a king may mot be able to see all of it's
+      attackers. A player may make a move that results in their king being taken on the opponent's next move.</li>
+    <li>There is no concept of 'stalemate' because there is no check.</li>
+    <li>There is no concept of 'checkmate' because there is no check.</li>
+    <li>Since there is no concept of 'check' or 'checkmate', the object of the game is to capture the opponent's
+      king.</li>
+  </ul>
+  <svg gamesbyemail-games-mccooeyhexchess-default-piecelibrary #pieceLibrary width="0" height="0" style="display:inline"></svg>
+</gamesbyemail-base-rules>

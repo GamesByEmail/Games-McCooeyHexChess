@@ -1,0 +1,35 @@
+<mat-accordion *ngIf="game.options">
+
+  <mat-expansion-panel *ngIf="optionChosen('dark')">
+    <mat-expansion-panel-header>
+      <mat-panel-title>
+        <gamesbyemail-base-optiontitle type="option" [info]="true">
+          Dark McCooey Hex Chess.
+        </gamesbyemail-base-optiontitle>
+      </mat-panel-title>
+    </mat-expansion-panel-header>
+    <p>
+      Dark McCooey Hex Chess is a variant of McCooey Hex Chess. All the pieces move in the same fashion. The differences are:
+    </p>
+    <ul>
+      <li>
+        A player is only able to see squares that their pieces are capable of moving to or attacking, hence the name
+        Dark Chess.
+      </li>
+      <li>
+        There is no concept of 'check'. Because of the above limitation, a king may mot be able to see all of it's
+        attackers. A player may make a move that results in their king being taken on the opponent's next move.
+      </li>
+      <li>
+        There is no concept of 'stalemate' because there is no check.
+      </li>
+      <li>
+        There is no concept of 'checkmate' because there is no check.
+      </li>
+      <li>
+        Since there is no concept of 'check' or 'checkmate', the object of the game is to capture the opponent's king.
+      </li>
+    </ul>
+    </mat-expansion-panel>
+
+</mat-accordion>

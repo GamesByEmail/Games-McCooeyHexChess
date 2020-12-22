@@ -1,0 +1,59 @@
+.border {
+  fill:rgb(0,0,0);
+}
+.white {
+  fill:rgb(255,255,255);
+  stroke:black;
+  stroke-width: 0.5;
+}
+.grey {
+  fill:rgb(195,195,195);
+  stroke:black;
+  stroke-width: 0.5;
+}
+.black {
+  fill:rgb(127,127,127);
+  stroke:black;
+  stroke-width: 0.5;
+}
+.edge {
+  fill:black;
+}
+.cap {
+  stroke:black;
+  stroke-width: 0.5;
+}
+.dark.black {
+  fill:rgb(41,41,41);
+  stroke:black;
+  stroke-width: 0.5;
+}
+.dark.grey {
+  fill:rgb(43,43,43);
+  stroke:black;
+  stroke-width: 0.5;
+}
+.dark.white {
+  fill:rgb(47,47,47);
+  stroke:black;
+  stroke-width: 0.5;
+}
+.highlight {
+  fill:none;
+  stroke:rgb(0,0,255);
+  stroke-width:1;
+}
+.piece {
+  width: 62px;
+  height: 62px;
+  pointer-events: none;
+}
+.movable {
+  cursor:pointer;
+}
+::ng-deep text{
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}

@@ -1,0 +1,30 @@
+<svg viewBox="0 0 400 170" width=400 height=170 xmlns="http://www.w3.org/2000/svg">
+  <g svg-dialog-title>
+    <text>You must promote your pawn.</text>
+  </g>
+  <g svg-dialog-button="raised" width="72" height="72" transform="translate(46,76)" (click)="close('q')">
+    <g transform="translate(-30.10,-30.10)">
+      <svg width="62" height="62" [template-projection]="data.pieceLibrary" [key]="{type:'Queen',team:data.teamColor}"></svg>
+    </g>
+  </g>
+  <g svg-dialog-button="raised" width="72" height="72" transform="translate(146,76)" (click)="close('r')">
+    <g transform="translate(-30.10,-30.10)">
+      <svg width="62" height="62" [template-projection]="data.pieceLibrary" [key]="{type:'Rook',team:data.teamColor}"></svg>
+    </g>
+  </g>
+  <g svg-dialog-button="raised" width="72" height="72" transform="translate(246,76)" (click)="close('n')">
+    <g transform="translate(-30.10,-30.10)">
+      <svg width="62" height="62" [template-projection]="data.pieceLibrary" [key]="{type:'Knight',team:data.teamColor}"></svg>
+    </g>
+  </g>
+  <g svg-dialog-button="raised" width="72" height="72" transform="translate(346,76)" (click)="close('b')">
+    <g transform="translate(-30.10,-30.10)">
+      <svg width="62" height="62" [template-projection]="data.pieceLibrary" [key]="{type:'Bishop',team:data.teamColor}"></svg>
+    </g>
+  </g>
+  <g svg-dialog-action>
+    <g svg-dialog-button="flat" width="200" (click)="close()">
+      <text>Undo move</text>
+    </g>
+  </g>
+</svg>
